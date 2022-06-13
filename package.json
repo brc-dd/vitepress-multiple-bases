@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "build": "pnpm build:docs && BASE='/foo/' pnpm build:docs",
-    "build:docs": "vitepress build docs",
-    "serve": "serve dist/docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "build": "pnpm docs:build && BASE='/foo/' pnpm docs:build"
   },
   "devDependencies": {
-    "serve": "^13.0.2",
-    "vitepress": "1.0.0-alpha.1",
-    "vue": "^3.2.37"
+    "vitepress": "latest",
+    "vue": "latest"
   }
 }
