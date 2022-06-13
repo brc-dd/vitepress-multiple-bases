@@ -1,12 +1,11 @@
 {
   "scripts": {
-    "build": "shx rm -rf dist/docs && shx mkdir -p dist && BASE='/' pnpm build:docs && BASE='/foo/' pnpm build:docs",
-    "build:docs": "vitepress build docs && shx cp -r docs/.vitepress/dist dist/docs$BASE",
+    "build": "BASE='/' pnpm build:docs && BASE='/foo/' pnpm build:docs",
+    "build:docs": "vitepress build docs",
     "serve": "serve dist/docs"
   },
   "devDependencies": {
     "serve": "^13.0.2",
-    "shx": "^0.3.4",
     "vitepress": "1.0.0-alpha.1",
     "vue": "^3.2.37"
   }
