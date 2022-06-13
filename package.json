@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "BASE='/' pnpm build:docs && BASE='/foo/' pnpm build:docs",
+    "build": "pnpm build:docs && BASE='/foo/' pnpm build:docs",
     "build:docs": "vitepress build docs",
     "serve": "serve dist/docs"
   },
